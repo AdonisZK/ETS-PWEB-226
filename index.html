@@ -12,7 +12,7 @@
   <body>
     <div class="container-fluid p-5" id="container">
       <div class="row "></div>
-        <div class="col-12 col-md-12">
+        <div class="col-md-12">
           <div class="shadow" id="table-products"></div>
         </div>
     <ul id="authors"></ul>
@@ -36,7 +36,6 @@
 
       function displayAuthors(data) {
         const tableProductsDiv = document.getElementById("table-products");
-        tableProductsDiv.innerHTML = "";
 
         const gridContainerDiv = document.createElement("div");
         gridContainerDiv.classList.add(
@@ -58,7 +57,7 @@
 
           const titleParagraph = document.createElement("p");
           titleParagraph.classList.add("card-title");
-          titleParagraph.textContent = book.title;
+          titleParagraph.textContent = book.title + " (" + book.year + ")";
 
           const authorParagraph = document.createElement("p");
           authorParagraph.classList.add("card-text");
