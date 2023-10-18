@@ -13,7 +13,7 @@
     <div class="container-fluid p-5" id="container">
       <div class="row "></div>
         <div class="col-md-12">
-          <div class="shadow" id="table-products"></div>
+          <div  id="table-products"></div>
         </div>
     <ul id="authors"></ul>
 
@@ -43,6 +43,7 @@
           "row-cols-1",
           "row-cols-md-3",
           "g-3",
+          "mx-3",
         );
 
         data.forEach((book) => {
@@ -50,7 +51,8 @@
           gridItemDiv.classList.add("col");
 
           const cardDiv = document.createElement("div");
-          cardDiv.classList.add("card");
+          cardDiv.classList.add("card",
+          "shadow",);
 
           const cardBodyDiv = document.createElement("div");
           cardBodyDiv.classList.add("card-body");
